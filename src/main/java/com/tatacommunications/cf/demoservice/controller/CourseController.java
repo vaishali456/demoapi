@@ -36,6 +36,7 @@ public class CourseController {
 	private CourseRepository courseRepository;
 
 	// Get All courses
+	@CrossOrigin(origins = "*")
 	@GetMapping
 	public ResponseEntity<?> getAllCourses() {
 		logger.info("GET Request started for /pocapp/courses to get all courses");
@@ -60,6 +61,7 @@ public class CourseController {
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
+	@CrossOrigin(origins = "*")
 	public ResponseEntity<?> createCourse(@Valid @RequestBody Course course) {
 		logger.info("POST Request started for /pocapp/courses to craete new course: {}", course);
 		if (courseService.isAlreadyExists(course)) {
