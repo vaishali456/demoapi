@@ -21,6 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers("/pocapp/**").hasRole("USER")
 				.antMatchers("/**").hasRole("ADMIN")
 				.and().csrf().disable().headers().frameOptions().disable();
+		 http.cors();
 	}
 
 }
