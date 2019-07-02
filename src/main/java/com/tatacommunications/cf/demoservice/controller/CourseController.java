@@ -37,7 +37,7 @@ public class CourseController {
 	private CourseRepository courseRepository;
 
 	// Get All courses
-	@CrossOrigin(origins = "*")
+	@CrossOrigin(origins = "http://demouiapp1")
 	@GetMapping
 	public ResponseEntity<?> getAllCourses() {
 		logger.info("GET Request started for /pocapp/courses to get all courses");
